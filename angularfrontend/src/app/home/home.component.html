@@ -1,0 +1,67 @@
+<!-- <div class="container mt-5">
+   <div class="card text-center" style="padding: 20px; ">
+    <h1>This is Home Page</h1>
+   </div>
+</div> -->
+
+<!-- <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+   <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+   <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+   <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+   <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+ </div>
+ <div class="tab-content" id="v-pills-tabContent">
+   <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
+   <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+   <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+   <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+ </div> -->
+
+ <!-- <div class="container">
+   <h1>Categories</h1>
+   <div class="btn-group-vertical" role="group" aria-label="Groupe de boutons en colonne">
+      <button type="button" class="btn btn-secondary">Haut</button>
+      <button type="button" class="btn btn-secondary">Milieu</button>
+      <button type="button" class="btn btn-secondary">Bas</button>
+   </div>
+</div> -->
+
+
+
+
+
+
+
+<div class="mt-1">
+   <div class="row ">
+       <div class="col-md-3">
+           <table mat-table style="width: 100%" [dataSource]="categories" class="mat-elevation-z8">
+             <ng-container matColumnDef="categoryName">
+               <th mat-header-cell *matHeaderCellDef> </th>
+               <td mat-cell *matCellDef="let category"> 
+                 
+               </td>
+             </ng-container>
+
+             <ng-container matColumnDef="action">
+               <th mat-header-cell *matHeaderCellDef> Categories </th>
+               <td mat-cell *matCellDef="let category"> 
+                  <button class="btn btn-warning btn-sm" (click)="detailCategory(category.categoryId)">{{category.categoryName}}</button>  
+               </td>
+             </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="categoryColums"></tr>
+             <tr mat-row *matRowDef="let category; columns: categoryColums"></tr>
+           </table>
+         <mat-paginator
+           class="mat-elevation-z8"
+           [length]="totalElements"
+           [pageSize]="size"
+           [pageSizeOptions]="[6 , 12 , 20  , 30 ,  40]"
+           (page)="pageEvent = $event ; onPaginateChange($event)"
+           showFirstLastButtons>
+
+         </mat-paginator>
+       </div>
+   </div>
+</div>

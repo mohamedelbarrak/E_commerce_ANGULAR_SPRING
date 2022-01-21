@@ -1,0 +1,106 @@
+<!-- <div class="container mt-5">
+    <div class="card text-center" style="color: green; padding: 20px;">
+        <h1>You are Admin</h1>
+    </div>
+</div>  -->
+
+         
+<mat-nav-list mode="side" opened="true" style="min-width:60px;  background: #F3F3F3;" autosize fixedTopGap="56">
+  <div class="sidebar_menu"  >
+    <mat-nav-list class="menu-list">
+      <a mat-list-item routerLinkActive="active-list-item" routerLink="dashbord" title="Dashboard">
+        <span class="label" [@labelAnimation]="sideNavState">Dashboard</span>
+      </a>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLinkActive="active-list-item" routerLink="listCategories" title="Categories">
+        <span class="label" [@labelAnimation]="sideNavState">Categories</span>
+      </a>
+      <a mat-list-item routerLinkActive="active-list-item" routerLink="listProducts" title="Products">
+        <span class="label" [@labelAnimation]="sideNavState">Products</span>
+      </a>
+      <a mat-list-item routerLinkActive="active-list-item" routerLink="listCustomers" title="Customers">
+        <span class="label" [@labelAnimation]="sideNavState">Customers</span>
+      </a>
+      <a mat-list-item routerLinkActive="active-list-item" routerLink="listPromotions" title="Promotions">
+        <span class="label" [@labelAnimation]="sideNavState">Promotions</span>
+      </a>
+      <a mat-list-item routerLinkActive="active-list-item" routerLink="listOrders" title="Orders">
+        <span class="label" [@labelAnimation]="sideNavState">Orders</span>
+      </a>
+    </mat-nav-list>
+  </div>
+</mat-nav-list>
+
+
+
+
+<!-- <mat-sidenav-container>
+  <mat-sidenav mode="side" opened="true" style="min-width:60px;  background: #F3F3F3;" autosize fixedTopGap="56">
+    <app-sidebar></app-sidebar> 
+    
+  </mat-sidenav>
+  <mat-sidenav-content style="height: 700px" [@onSideNavChange]="sideNavState">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+
+
+
+<!-- 
+
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened="true" style="min-width:60px;  background: #F3F3F3;" autosize fixedTopGap="56">
+      <app-sidebar></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content style="height: 1800px" [@onSideNavChange]="sideNavState">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            
+            
+
+            
+<mat-nav-list mode="side" opened="true" style="min-width:60px;  background: #F3F3F3;" autosize fixedTopGap="56">
+    <div class="sidebar_menu"  [@onSideNavChange]="sideNavState">
+      <mat-nav-list class="menu-list">
+        <a mat-list-item routerLinkActive="active-list-item" routerLink="dashbord" title="Dashboard">
+          <span class="label" [@labelAnimation]="sideNavState">Dashboard</span>
+        </a>
+        <mat-divider></mat-divider>
+        <a mat-list-item routerLinkActive="active-list-item" routerLink="admin/listCategories" title="Categories">
+          <span class="label" [@labelAnimation]="sideNavState">Categories</span>
+        </a>
+        <a mat-list-item routerLinkActive="active-list-item" routerLink="admin/listProducts" title="Products">
+          <span class="label" [@labelAnimation]="sideNavState">Products</span>
+        </a>
+        <a mat-list-item routerLinkActive="active-list-item" routerLink="listCustomers" title="Customers">
+          <span class="label" [@labelAnimation]="sideNavState">Customers</span>
+        </a>
+        <a mat-list-item routerLinkActive="active-list-item" routerLink="listPromotions" title="Promotions">
+          <span class="label" [@labelAnimation]="sideNavState">Promotions</span>
+        </a>
+        <a mat-list-item routerLinkActive="active-list-item" routerLink="listOrders" title="Orders">
+          <span class="label" [@labelAnimation]="sideNavState">Orders</span>
+        </a>
+      </mat-nav-list>
+    </div>
+  </mat-nav-list>
+  
+
+
+  
+          </div>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+   -->

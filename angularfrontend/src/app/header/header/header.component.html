@@ -1,0 +1,82 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <app-toggle-sidebar></app-toggle-sidebar>
+  <a class="navbar-brand ml-2" routerLink="dashbord">A-Store</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <span class="navbar-text mr-4" >anhtran</span>
+          </li>
+          <li class="nav-item">
+              <span class="navbar-text mr-4" >anh94701@gmail.com</span>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link mr-4" href="#">Logout</a>
+          </li>
+      </ul>
+      <app-dark-mode></app-dark-mode>
+  </div>
+</nav>
+ -->
+
+
+
+
+ 
+ <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary" > -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">ECommerce</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/home">Categories</a>
+          </li> 
+
+          
+
+          
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li> -->
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/admin" *ngIf="userService.roleMatch(['Admin'])">
+              Admin Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/user" *ngIf="userService.roleMatch(['User'])">
+              User Dashboard</a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/addproduct" *ngIf="userService.roleMatch(['Admin'])">
+              Commandes</a>
+          </li>
+  
+        </ul>
+        <button *ngIf="! isLoggedIn()" type="button" class="btn btn-success margin-right: 5px" routerLink="/login">Login</button>
+        <a> </a>
+        <button *ngIf="! isLoggedIn()" type="button" class="btn margin-left btn-light" routerLink="/register">Register</button>
+        <button *ngIf="isLoggedIn()" type="button" class="btn btn-danger" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </nav>

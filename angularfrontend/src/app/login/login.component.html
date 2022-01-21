@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <div class="card" style="padding: 20px;">
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+            <!-- loginForm pour le nom du form &  ngSubmit pour executer la fonction aprer submit -->
+            <!-- le creation du fonction login se fait au nivaux du login.component.ts -->
+            <!-- avent de créer la fonction, il faut ajouter FormsModule dans app.module.ts au imports  -->
+            <!-- userName and  userPassword sont les attributs de JwtRequest dans JwtController  -->
+            <input type="text"
+            ngModel
+            name="userName"
+            id="userName"
+            placeholder="Enter your username"
+            class="form-control mb-3"
+            >
+
+            <input type="password"
+            ngModel
+            name="userPassword"
+            id="userPassword"
+            placeholder="Enter your password"
+            class="form-control mb-3"
+            >
+
+            <input type="submit"
+            value="Login"
+            class="btn btn-outline-primary form-control rounded-0">
+        </form>
+    </div>
+</div>
